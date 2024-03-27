@@ -1,6 +1,6 @@
 export enum AppRoutes {
-  EMPLOYEES = 'employees',
-  PAYROLLS = 'payrolls',
+  BOOK = 'book',
+  VIDEOGAME = 'videogame',
   MUSIC = 'music',
-  DEFAULT = 'employees'
+  DEFAULT = AppRoutes.BOOK
 }
