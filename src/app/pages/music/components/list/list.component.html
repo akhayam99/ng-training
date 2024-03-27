@@ -1,0 +1,7 @@
+<ngt-loader *ngIf="loading; else showList" />
+
+<ng-template #showList>
+  <ng-container *ngFor="let item of items">
+    <ngt-music-detail [item]="item" />
+  </ng-container>
+</ng-template>

@@ -1,0 +1,6 @@
+<ngt-sidebar-voice
+  *ngFor="let route of _myRoutes"
+  (navigate)="navigateTo($event)"
+  [route]="route"
+  [selected]="selected === route"
+/>

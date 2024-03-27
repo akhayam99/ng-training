@@ -1,0 +1,19 @@
+:host{
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0px 12px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #CCEDF1;
+  }
+
+  &.selected {
+    background-color: #7fd2dc;
+  }
+
+  &:active{
+    background-color: #19aec0;
+  }
+}
