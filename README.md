@@ -1,27 +1,61 @@
-# Tutorial
+# Progressive Exercises for Angular Training
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
+## Create a Component and Add it to the Routing
 
-## Development server
+1.  Generate a new component using the Angular CLI command: `ng generate component component-name`
+2.  Add the component to the sidebar navigation.
+3.  Add the new component to the routing in `app-routing.module.ts`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Define the Backend Endpoint in the Environment File
 
-## Code scaffolding
+1.  Add the backend endpoint URL to `environment.ts` as follows:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+typescriptCopy code
 
-## Build
+`export const environment = {
+  production: false,
+  apiUrl: 'http://localhost:3000/api' // Replace with the correct endpoint
+};`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2.  Use `environment.apiUrl` in your service to define the backend endpoint.
 
-## Running unit tests
+## Define the Data Type Interface
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1.  Create an interface to define the data type received from the backend.
+2.  Use this interface in your services and components to type the data.
 
-## Running end-to-end tests
+## Create the Service and Perform a GET Request
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1.  Generate a new service using the Angular CLI command: `ng generate service service-name`.
+2.  Implement a `get()` function in the service to make a GET request to the backend and retrieve data.
 
-## Further help
+## Display the List Result in a Component
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1.  Use the `get()` function of the service to retrieve data from the backend.
+2.  Display the data in your component using `*ngFor`.
+
+## Separate Components into List and Detail
+
+1.  Create two separate components: one for the list and one for the detail.
+2.  Use the list component to display a list of items and the detail component to display details of a selected item.
+
+## Create and Use the Delete Call
+
+1.  Add a `delete(id)` function to your service to make a DELETE request to the backend.
+2.  Use this function in your component to allow users to delete an item.
+
+## Implement the Delete Call
+
+1.  In the child component (e.g., detail component), implement a function to delete the item and send an output to the parent component.
+2.  In the parent component (e.g., list component), handle the output received from the child component and update the list of displayed items accordingly.
+
+## Create a Form and Execute a POST
+
+1.  Create a form in your component to collect data to send to the backend.
+2.  Implement a `submit(data)` function in your component to handle sending the form data.
+3.  Utilize the previously created service to make a POST request to the backend, passing the data collected from the form.
+4.  Handle the response of the POST request in your component.
+
+## Performance Optimization
+
+1.  Implement performance optimization techniques such as lazy loading, code splitting, and preloading to improve the loading speed and efficiency of your Angular application.
