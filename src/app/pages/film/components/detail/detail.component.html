@@ -1,0 +1,14 @@
+<div class="info">title: {{ item.title }}</div>
+<div class="info">cast: {{ item.cast }}</div>
+<div class="info">contry: {{ item.contry }}</div>
+<div class="info">director: {{ item.director }}</div>
+<div class="info">durationMinutes: {{ item.durationMinutes }}</div>
+<div class="info">genre: {{ item.genre }}</div>
+<div class="info">language: {{ item.language }}</div>
+<div class="info">posterURL: {{ item.posterURL }}</div>
+<div class="info">rating: {{ item.rating }}</div>
+<div class="info">releaseYear: {{ item.releaseYear }}</div>
+<div class="info">synopsis: {{ item.synopsis }}</div>
+<div class="info">trailerURL: {{ item.trailerURL }}</div>
+
+<button (click)="deleteEmitter.emit(item.id)">Delete</button>

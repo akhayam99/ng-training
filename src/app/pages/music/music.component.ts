@@ -22,8 +22,4 @@ export class MusicComponent implements OnInit {
     this.service.loadList()
   }
 
-  deleteItem(id: string): void {
-    this.service.deleteItem(id)
-  }
-
 }

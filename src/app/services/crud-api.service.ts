@@ -17,8 +17,8 @@ export class CrudApiService<T> {
     return this.client.get<T[]>(`${environment.apiUrl}/${this.endpoint}/${id}`)
   }
 
-  delete$(id: string): void {
-    this.client.delete<T[]>(`${environment.apiUrl}/${this.endpoint}/${id}`).subscribe()
+  delete$(id: string): Observable<T> {
+    return this.client.delete<T>(`${environment.apiUrl}/${this.endpoint}/${id}`)
   }
 
   create$(id: string, data: T): void {

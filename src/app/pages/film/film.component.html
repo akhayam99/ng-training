@@ -1,7 +1,6 @@
 <h1>{{ title }}</h1>
 
-<ngt-music-list
-  (onDelete)="service.deleteItem($event)"
+<ngt-film-list
   [items]="service.list$ | async"
   [loading]="service.loading$ | async"
-></ngt-music-list>
+/>

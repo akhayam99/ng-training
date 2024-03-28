@@ -2,6 +2,6 @@
 
 <ng-template #showList>
   <ng-container *ngFor="let item of items">
-    <ngt-music-detail (onDelete)="onDelete.emit($event)" [item]="item" />
+    <ngt-film-detail (deleteEmitter)="deleteFilmEvent($event)" [item]="item" />
   </ng-container>
 </ng-template>

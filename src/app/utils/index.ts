@@ -1,5 +1,6 @@
 import { AppRoutes } from "../enum/AppRoutes"
 import { BookComponent } from "../pages/book/book.component"
+import { FilmComponent } from "../pages/film/film.component"
 import { MusicComponent } from "../pages/music/music.component"
 import { VideogameComponent } from "../pages/videogame/videogame.component"
 
@@ -12,6 +13,7 @@ export function beautyRoute(route: AppRoutes): string {
     case AppRoutes.BOOK: return 'Libri'
     case AppRoutes.VIDEOGAME: return 'Videogiochi'
     case AppRoutes.MUSIC: return 'Canzoni'
+    case AppRoutes.FILM: return 'Film'
     default: return 'Ma che spacchio ne so scusi'
   }
 }
@@ -21,6 +23,7 @@ export function componentRoute(route: AppRoutes): any {
     case AppRoutes.BOOK: return BookComponent
     case AppRoutes.VIDEOGAME: return VideogameComponent
     case AppRoutes.MUSIC: return MusicComponent
+    case AppRoutes.FILM: return FilmComponent
     default: return 'Ma che spacchio ne so scusi'
   }
 }

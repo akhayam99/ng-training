@@ -3,3 +3,4 @@
 <div class="info">artist: {{ item.artist }}</div>
 <div class="info">genre: {{ item.genre }}</div>
 <div class="info">releaseYear: {{ item.releaseYear }}</div>
+<button (click)="onDelete.emit(item.id)">Delete</button>

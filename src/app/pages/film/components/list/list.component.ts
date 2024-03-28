@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { LoaderComponent } from 'src/app/components/loader/loader.component';
-import { Music } from '../../types/Music';
-import { MusicDetailComponent } from '../detail/detail.component';
+import { Film } from '../../types/Film';
+import { FilmDetailComponent } from '../detail/detail.component';
 
 
 @Component({
-  selector: 'ngt-music-list',
+  selector: 'ngt-film-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -14,12 +14,14 @@ import { MusicDetailComponent } from '../detail/detail.component';
   imports: [
     CommonModule,
     LoaderComponent,
-    MusicDetailComponent,
+    FilmDetailComponent,
   ],
 })
-export class MusicListComponent {
-  @Input() items: Music[] | null = []
+export class FilmListComponent {
+  @Input() items: Film[] | null = []
   @Input() loading: boolean | null = false
 
-  @Output() onDelete = new EventEmitter<string>()
+  deleteFilmEvent(id: string): void {
+    // console.log('deleteFilmEvent', id)
+  }
 }
